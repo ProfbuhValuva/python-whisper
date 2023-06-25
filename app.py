@@ -200,7 +200,7 @@ def take_screenshots():
                 (51, 68, 1380, 805))
             screenshot.save(screenshot_path)
             screenshot_paths.append(
-                "<div> <img width=\"600\" height=\"400\" src=\"https://b25c-77-94-216-241.ngrok-free.app/url/" + screenshot_path + "\" alt=\"" + seconds_to_time(
+                "<div> <img width=\"600\" height=\"400\" src=\"http://localhost:8081/url/" + screenshot_path + "\" alt=\"" + seconds_to_time(
                     get_seconds_from_url(timecode)) + "\"> <p><center><a href=\"" + timecode + "\">" + seconds_to_time(
                     get_seconds_from_url(timecode)) + "</a></center></p> </div>")
 
