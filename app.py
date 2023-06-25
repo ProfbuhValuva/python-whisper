@@ -85,12 +85,12 @@ def llm_response():
         flag = False
         if data.get('model') == 'gpt-4-0613':
             flag = True
-            chatbot = Chatbot(api_key="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", max_tokens=8000,
+            chatbot = Chatbot(api_key="sk - jZPUfV2vOW5NuH2NaiJOT3BlbkFJDXVUuXooZ5uKYRkVUTlJ", max_tokens=8000,
                               system_prompt=SYSTEM_PROMPT,
                               engine="gpt-4-0613", temperature=0.9)
         if data.get('model') == 'gpt-3.5-turbo-16k-0613':
             flag = True
-            chatbot = Chatbot(api_key="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", max_tokens=16000,
+            chatbot = Chatbot(api_key="sk - jZPUfV2vOW5NuH2NaiJOT3BlbkFJDXVUuXooZ5uKYRkVUTlJ", max_tokens=16000,
                               system_prompt=SYSTEM_PROMPT,
                               engine="gpt-3.5-turbo-16k-0613", temperature=0.65)
         print("Segments: " + str(data.get('segments')))
