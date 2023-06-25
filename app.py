@@ -43,7 +43,7 @@ def youtube_downloader():
             cut_track = song[start: end]
             cut_track.export(final_filename, format="mp3")
         print(final_filename)
-        output = replicate.Client(api_token="r8_Si0ll04akWl9xUI9QBLgxLMOHjoifVi4Wz2c1").run(
+        output = replicate.Client(api_token="r8_KYsbIzX9vGZNzjJU5dGKYU2KgPayWoB3r85km").run(
             "openai/whisper:91ee9c0c3df30478510ff8c8a3a545add1ad0259ad3a9f78fba57fbc05ee64f7",
             input={"audio": open(final_filename, "rb")}
         )
@@ -85,12 +85,12 @@ def llm_response():
         flag = False
         if data.get('model') == 'gpt-4-0613':
             flag = True
-            chatbot = Chatbot(api_key="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", max_tokens=8000,
+            chatbot = Chatbot(api_key="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", max_tokens=8000,
                               system_prompt=SYSTEM_PROMPT,
                               engine="gpt-4-0613", temperature=0.9)
         if data.get('model') == 'gpt-3.5-turbo-16k-0613':
             flag = True
-            chatbot = Chatbot(api_key="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", max_tokens=16000,
+            chatbot = Chatbot(api_key="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", max_tokens=16000,
                               system_prompt=SYSTEM_PROMPT,
                               engine="gpt-3.5-turbo-16k-0613", temperature=0.65)
         print("Segments: " + str(data.get('segments')))
@@ -200,7 +200,7 @@ def take_screenshots():
                 (51, 68, 1380, 805))
             screenshot.save(screenshot_path)
             screenshot_paths.append(
-                "<div> <img width=\"600\" height=\"400\" src=\"http://localhost:8081/url/" + screenshot_path + "\" alt=\"" + seconds_to_time(
+                "<div> <img width=\"600\" height=\"400\" src=\"https://b25c-77-94-216-241.ngrok-free.app/url/" + screenshot_path + "\" alt=\"" + seconds_to_time(
                     get_seconds_from_url(timecode)) + "\"> <p><center><a href=\"" + timecode + "\">" + seconds_to_time(
                     get_seconds_from_url(timecode)) + "</a></center></p> </div>")
 
